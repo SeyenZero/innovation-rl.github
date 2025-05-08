@@ -54,6 +54,18 @@ body {
     animation: pulse 2s infinite; /* Aplicamos la animación de pulso desde el inicio */
 }
 
+.boton-pc {
+    position: absolute;
+    top:45vw;
+    left: 35vw;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out; /* Transición para suavizar el efecto */
+    animation: pulse 2s infinite; /* Aplicamos la animación de pulso desde el inicio */
+}
+
 .boton-movil-1 {
     position: absolute;
     top: 120vw;
@@ -66,11 +78,35 @@ body {
     animation: pulse 2s infinite; /* Aplicamos la animación de pulso desde el inicio */
 }
 
+.boton-pc-1 {
+    position: absolute;
+    top:140vw;
+    left: 19vw;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out; /* Transición para suavizar el efecto */
+    animation: pulse 2s infinite; /* Aplicamos la animación de pulso desde el inicio */
+}
+
 .boton-movil-2 {
     position: absolute;
     top: 150vw;
     left: 22vw;
     width: 55vw;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out; /* Transición para suavizar el efecto */
+    animation: pulse 2s infinite; /* Aplicamos la animación de pulso desde el inicio */
+}
+
+.boton-pc-2 {
+    position: absolute;
+    top:62vw;
+    left: 19vw;
+    width: 60vw;
     display: flex;
     justify-content: center;
     z-index: 2;
@@ -185,6 +221,36 @@ body {
   }
   
   .swipper-movil img:hover{
+    cursor: crosshair;
+    width: 10vw;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+
+  .swipper-pc{
+    position: absolute;
+    top: 26vw;
+    left: 11.5vw;
+    width: 78vw;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+
+  }
+
+.swipper-pc img{
+    width: 20px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+    border-radius: 5px;
+  }
+  
+  .swipper-pc img:hover{
     cursor: crosshair;
     width: 10vw;
     opacity: 1;
