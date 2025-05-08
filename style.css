@@ -111,9 +111,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
+    z-index: 4;
     height: auto;
 }
+
 
 @media (min-width: 768px) {
     .contenedor-movil {
@@ -167,18 +168,22 @@ body {
     width: 90vw;
     height: auto;
     display: flex;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
     z-index: 3;
 
   }
-  .swipper-movil img{
-    width: 0px;
+
+.swipper-movil img{
+    width: 20px;
     flex-grow: 1;
     object-fit: cover;
     opacity: .8;
     transition: .5s ease;
+    border-radius: 5px;
   }
+  
   .swipper-movil img:hover{
     cursor: crosshair;
     width: 10vw;
