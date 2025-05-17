@@ -287,13 +287,10 @@ body {
 
 .video {
     position: absolute;
-    top: 124vw;
-    left: 22vw;
-    right: 22vw;
+    top: 124vw; /* Ajusta según sea necesario */
+    left: 50%; /* Coloca el borde izquierdo del video en el centro del padre */
+    transform: translateX(-50%); /* Desplaza el video hacia la izquierda en la mitad de su propio ancho */
     width: 55vw;
     height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 4;
 }
