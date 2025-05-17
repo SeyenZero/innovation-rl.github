@@ -288,7 +288,8 @@ body {
 .video {
     position: absolute;
     top: 122vw;
-    left: 22vw;
+    left: 11vw;
+    right: 11vw;
     width: 55vw;
     height: auto;
     display: flex;
