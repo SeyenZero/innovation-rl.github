@@ -80,9 +80,9 @@ body {
 
 .boton-pc-1 {
     position: absolute;
-    top:140vw;
-    left: 19vw;
-    width: 60vw;
+    top:115vw;
+    left: 33vw;
+    width: 32vw;
     display: flex;
     justify-content: center;
     z-index: 2;
@@ -104,9 +104,9 @@ body {
 
 .boton-pc-2 {
     position: absolute;
-    top:62vw;
-    left: 19vw;
-    width: 60vw;
+    top:30vw;
+    left: 33vw;
+    width: 32vw;
     display: flex;
     justify-content: center;
     z-index: 2;
@@ -227,15 +227,15 @@ body {
     filter: contrast(120%);
   }
 
-  .swipper-pc{
+.swipper-pc{
     position: absolute;
-    top: 26vw;
+    top: 15vw;
     left: 11.5vw;
     width: 78vw;
     height: auto;
     display: flex;
     overflow: hidden;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     z-index: 3;
 
@@ -248,11 +248,51 @@ body {
     opacity: .8;
     transition: .5s ease;
     border-radius: 5px;
+    margin: 10px;
   }
   
   .swipper-pc img:hover{
     cursor: crosshair;
-    width: 10vw;
+    width: 6.5vw;
     opacity: 1;
     filter: contrast(120%);
   }
+
+.swiper {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 22%; /* Considera ajustar esto */
+    z-index: 3;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    width: 16vw; /* Ajusta este valor según el tamaño deseado */
+    flex-grow: 1;
+    object-fit: cover;
+}
+
+.swiper-slide img {
+    width: 16vw;
+    height: auto;
+    object-fit: cover;
+}
+
+.video {
+    position: absolute;
+    top: 122vw;
+    left: 2vw;
+    width: 55vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
