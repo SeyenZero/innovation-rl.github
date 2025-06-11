@@ -1,0 +1,320 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.bloque {
+    width: 100%;
+    position: relative;
+}
+
+.contenedor-pc {
+    display: none;
+}
+
+.contenedor-movil {
+    position: relative;
+}
+
+.fondo-movil {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.texto-movil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+.boton-movil {
+    position: absolute;
+    top: 96vw;
+    left: 24vw;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out; /* Transición para suavizar el efecto */
+    animation: pulse 2s infinite; /* Aplicamos la animación de pulso desde el inicio */
+}
+
+.boton-pc {
+    position: absolute;
+    top:45vw;
+    left: 35vw;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out; /* Transición para suavizar el efecto */
+    animation: pulse 2s infinite; /* Aplicamos la animación de pulso desde el inicio */
+}
+
+.boton-movil-1 {
+    position: absolute;
+    top: 190vw;
+    left: 25vw;
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+    transition: transform 0.2s ease-in-out; /* Transición para suavizar el efecto */
+    animation: pulse 2s infinite; /* Aplicamos la animación de pulso desde el inicio */
+}
+
+.boton-pc-1 {
+    position: absolute;
+    top:140vw;
+    left: 19vw;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out; /* Transición para suavizar el efecto */
+    animation: pulse 2s infinite; /* Aplicamos la animación de pulso desde el inicio */
+}
+
+.boton-movil-2 {
+    position: absolute;
+    top: 150vw;
+    left: 22vw;
+    width: 55vw;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+    transition: transform 0.2s ease-in-out; /* Transición para suavizar el efecto */
+    animation: pulse 2s infinite; /* Aplicamos la animación de pulso desde el inicio */
+}
+
+.boton-pc-2 {
+    position: absolute;
+    top:62vw;
+    left: 19vw;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out; /* Transición para suavizar el efecto */
+    animation: pulse 2s infinite; /* Aplicamos la animación de pulso desde el inicio */
+}
+
+.boton-movil-3 {
+    position: absolute;
+    top: 125vw;
+    left: 14vw;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out; /* Transición para suavizar el efecto */
+    animation: pulse 2s infinite; /* Aplicamos la animación de pulso desde el inicio */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Aumentamos el tamaño en un 10% en el punto medio de la animación */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.icono {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    height: auto;
+}
+
+
+@media (min-width: 768px) {
+    .contenedor-movil {
+        display: none;
+    }
+ 
+    .contenedor-pc {
+        display: block;
+        position: relative;
+    }
+    
+    .fondo-pc {
+        display: block;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+
+    .texto-pc {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .icono-pc {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        height: auto;
+    }
+}
+
+
+.swipper-movil{
+    position: absolute;
+    top: 50vw;
+    left: 6vw;
+    width: 90vw;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+
+  }
+
+.swipper-movil img{
+    width: 20px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+    border-radius: 5px;
+  }
+  
+  .swipper-movil img:hover{
+    cursor: crosshair;
+    width: 10vw;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+
+  .swipper-pc{
+    position: absolute;
+    top: 26vw;
+    left: 11.5vw;
+    width: 78vw;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+
+  }
+
+.swipper-pc img{
+    width: 20px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+    border-radius: 5px;
+  }
+  
+  .swipper-pc img:hover{
+    cursor: crosshair;
+    width: 10vw;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+
+
+.ruth {
+    position: absolute;
+    top: -16vw;
+    left: 7vw;
+    width: 55%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.texto-ruth {
+    position: absolute;
+    top: 10vw;
+    left: 2.5vw;
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.texto-movil-2 {
+    position: absolute;
+    top: -40vw;
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.boton-movil-2 {
+    position: absolute;
+    top: 90vw;
+    left: 26vw;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out; /* Transición para suavizar el efecto */
+    animation: pulse 2s infinite; /* Aplicamos la animación de pulso desde el inicio */
+}
+
+.registro {
+    position: absolute;
+    top: 120vw;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+
+}
