@@ -1,0 +1,470 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.bloque {
+    width: 100%;
+    position: relative;
+    /* Esto es crucial para que los elementos posicionados absolutamente dentro de cada bloque se posicionen correctamente respecto a él */
+}
+
+.contenedor-pc {
+    display: none; /* Por defecto oculto en móvil */
+}
+
+.contenedor-movil {
+    position: relative;
+}
+
+.fondo-movil {
+    display: block;
+    width: 100%;
+    height: auto; /* Corregido de height: auto¿; */
+    z-index: 1;
+}
+
+.texto-movil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    pointer-events: none; /* Para que no interfiera con clics en elementos debajo */
+}
+
+/* Estilos para botones móviles */
+.boton-movil {
+    position: absolute;
+    top: 105vw;
+    left: 20vw;
+    width: 55vw;
+    display: block; /* Asegura que el elemento sea un bloque para width/height */
+    z-index: 2;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.boton-movil-1 {
+    position: absolute;
+    top: 120vw;
+    left: 27vw;
+    width: 46vw;
+    display: block;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.boton-movil-2 {
+    position: absolute;
+    top: 240vw;
+    left: 22vw;
+    width: 56vw;
+    display: block;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.boton-movil-3 {
+    position: absolute;
+    top: 125vw;
+    left: 14vw;
+    width: 70vw;
+    display: block;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+/* Estilos para botones de PC (se activan en media query) */
+.boton-pc {
+    position: absolute;
+    top: 45vw; /* Considera usar unidades vw/vh con precaución en PC, o ajustarlas */
+    left: 35vw;
+    width: 30vw;
+    display: block;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.boton-pc-1 {
+    position: absolute;
+    top: 50vw;
+    left: 33vw;
+    width: 32vw;
+    display: block;
+    z-index: 2;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.boton-pc-2 {
+    position: absolute;
+    top: 62vw;
+    left: 33vw;
+    width: 32vw;
+    display: block;
+    z-index: 6;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.icono {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex; /* Asegura el centrado */
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+.money {
+    position: absolute;
+    top: 24vw;
+    left: 7vw;
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+.icono-1 {
+    position: absolute;
+    top: -48vw; /* Asegúrate de que esta posición negativa es intencional y funciona */
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+.icono-2 {
+    position: absolute;
+    top: 29vw;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex; /* Asegura el centrado */
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+/* --- Media Query para PC --- */
+@media (min-width: 768px) {
+    .contenedor-movil {
+        display: none; /* Oculta en PC */
+    }
+
+    .contenedor-pc {
+        display: block; /* Muestra en PC */
+        position: relative;
+    }
+
+    .fondo-pc {
+        display: block;
+        width: 100vw;
+        height: auto;
+        z-index: 1;
+    }
+
+    .texto-pc {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .icono-pc {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+    }
+}
+
+/* --- ESTILOS ESPECÍFICOS DE SWIPER --- */
+
+/* Contenedor del Swiper para móvil en bloque-7 */
+/* --- ESTILOS ESPECÍFICOS DE SWIPER --- */
+
+/* Contenedor del Swiper para móvil en bloque-7 */
+/* Contenedor del Swiper para móvil en bloque-7 */
+.swiper-movil {
+    position: absolute;
+    top: 2vw; /* Ajusta este valor. Prueba con 70vw, 80vw, etc. hasta que el slider se vea debajo del texto */
+    left: 0;
+    width: 100vw;
+    height: 100%; /* Ajusta este valor para el tamaño de las imágenes. Si son altas, este valor debe ser mayor */
+    overflow: hidden;
+    z-index: 3; /* Asegúrate de que esté por encima de otros elementos */
+    padding: 0 10vw; /* Ajusta este valor para cuánto se ve de las imágenes laterales */
+    box-sizing: border-box; /* Importante para que el padding no afecte el ancho total */
+}
+
+.swiper-movil .swiper-slide {
+    width: 60vw; /* Debe ser 100vw - (2 * padding lateral) */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.swiper-movil .swiper-slide img {
+    width: auto;
+    height: 70%;
+    object-fit: cover; /* Crucial para que las imágenes se adapten al tamaño del slide */
+    /* object-position: center top;  Prueba esto si las imágenes se ven cortadas por arriba */
+}
+
+/* Estilos del contenedor interno del Swiper - wrapper */
+.swiper-movil .swiper-wrapper {
+    /* Swiper gestiona esto. No necesitas añadirle flexbox ni nada aquí */
+}
+
+
+/* Estilos para el Swiper de PC (si lo descomentas en el HTML) */
+@media (min-width: 768px) {
+    .swiper-movil {
+    position: absolute;
+    top: 0; /* Ajusta este valor. Prueba con 70vw, 80vw, etc. hasta que el slider se vea debajo del texto */
+    left: 0;
+    width: 100vw;
+    height: 100%; /* Ajusta este valor para el tamaño de las imágenes. Si son altas, este valor debe ser mayor */
+    overflow: hidden;
+    z-index: 3; /* Asegúrate de que esté por encima de otros elementos */
+    padding: 0 10vw; /* Ajusta este valor para cuánto se ve de las imágenes laterales */
+    box-sizing: border-box; /* Importante para que el padding no afecte el ancho total */
+}
+
+.swiper-movil .swiper-slide {
+    width: 18vw; /* Debe ser 100vw - (2 * padding lateral) */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.swiper-movil .swiper-slide img {
+    width: auto;
+    height: 60%;
+    object-fit: cover; /* Crucial para que las imágenes se adapten al tamaño del slide */
+    /* object-position: center top;  Prueba esto si las imágenes se ven cortadas por arriba */
+}
+
+/* Estilos del contenedor interno del Swiper - wrapper */
+.swiper-movil .swiper-wrapper {
+    /* Swiper gestiona esto. No necesitas añadirle flexbox ni nada aquí */
+}
+
+}
+
+.video-movil {
+    position: absolute;
+    top: 35vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width:90vw;
+    height: auto;
+    z-index: 4;
+}
+
+.video {
+    position: absolute;
+    top: 15.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width:56vw;
+    height: auto;
+    z-index: 4;
+}
+
+.carrusel-movil{
+    position: absolute;
+    top: 30vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    display: flex; /* Asegura el centrado */
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    display: flex;
+}
+.carrusel-movil img{
+    width: 0px;
+    flex-grow: 1;
+    margin: 10px;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+.carrusel-movil img:hover{
+    cursor: crosshair;
+    width: 10%;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.carrusel-pc{
+    position: absolute;
+    top: 10vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 98%;
+    height: auto;
+    display: flex; /* Asegura el centrado */
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    display: flex;
+}
+.carrusel-pc img{
+    width: 0px;
+    flex-grow: 1;
+    margin: 10px;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+.carrusel-pc img:hover{
+    cursor: crosshair;
+    width: 2%;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.boton-97-movil{
+    position: absolute;
+    top: 152vw;
+    left: 24%;
+    width: 50vw;
+    display: block;
+    z-index: 5;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.boton-297-movil{
+    position: absolute;
+    top: 322vw;
+    left: 24%;
+    width: 50vw;
+    display: block;
+    z-index: 5;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.boton-final-movil{
+    position: absolute;
+    top: 125vw;
+    left: 23%;
+    width: 55vw;
+    display: block;
+    z-index: 5;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.boton-pc-97 {
+    position: absolute;
+    top: 80vw;
+    left: 18.5vw;
+    width: 25vw;
+    display: block;
+    z-index: 5;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.boton-pc-297 {
+    position: absolute;
+    top: 92vw;
+    left: 55.5vw;
+    width: 25vw;
+    display: block;
+    z-index: 5;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.boton-pc-final {
+    position: absolute;
+    top: 34vw;
+    left: 27.5vw;
+    width: 45vw;
+    display: block;
+    z-index: 5;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+.arreglar {
+    position: absolute;
+    top: 0;
+    left: 3.2%;
+    width: 94%;
+    height: auto;
+    display: flex; /* Asegura el centrado */
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.modificado {
+    position: absolute;
+    top: -5vw;
+    left: 28%;
+    width: 45%;
+    height: auto;
+    display: flex; /* Asegura el centrado */
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
