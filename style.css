@@ -169,6 +169,18 @@ body {
     z-index: 4;
 }
 
+.icono-2 {
+    position: absolute;
+    top: 29vw;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex; /* Asegura el centrado */
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
 /* --- Media Query para PC --- */
 @media (min-width: 768px) {
     .contenedor-movil {
@@ -373,7 +385,7 @@ body {
     left: 24%;
     width: 50vw;
     display: block;
-    z-index: 2;
+    z-index: 5;
     transition: transform 0.2s ease-in-out;
     animation: pulse 2s infinite;
 }
@@ -384,7 +396,7 @@ body {
     left: 24%;
     width: 50vw;
     display: block;
-    z-index: 2;
+    z-index: 5;
     transition: transform 0.2s ease-in-out;
     animation: pulse 2s infinite;
 }
@@ -395,7 +407,7 @@ body {
     left: 23%;
     width: 55vw;
     display: block;
-    z-index: 2;
+    z-index: 5;
     transition: transform 0.2s ease-in-out;
     animation: pulse 2s infinite;
 }
@@ -406,7 +418,7 @@ body {
     left: 18.5vw;
     width: 25vw;
     display: block;
-    z-index: 2;
+    z-index: 5;
     transition: transform 0.2s ease-in-out;
     animation: pulse 2s infinite;
 }
@@ -417,7 +429,7 @@ body {
     left: 55.5vw;
     width: 25vw;
     display: block;
-    z-index: 2;
+    z-index: 5;
     transition: transform 0.2s ease-in-out;
     animation: pulse 2s infinite;
 }
@@ -428,7 +440,31 @@ body {
     left: 27.5vw;
     width: 45vw;
     display: block;
-    z-index: 2;
+    z-index: 5;
     transition: transform 0.2s ease-in-out;
     animation: pulse 2s infinite;
+}
+
+.arreglar {
+    position: absolute;
+    top: 0;
+    left: 3.2%;
+    width: 94%;
+    height: auto;
+    display: flex; /* Asegura el centrado */
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.modificado {
+    position: absolute;
+    top: -5vw;
+    left: 28%;
+    width: 45%;
+    height: auto;
+    display: flex; /* Asegura el centrado */
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
 }
