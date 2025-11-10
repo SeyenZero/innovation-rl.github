@@ -67,7 +67,7 @@ body {
 
 .boton-movil-2 {
     position: absolute;
-    top: 240vw;
+    top: 255vw;
     left: 22vw;
     width: 56vw;
     display: block;
@@ -147,9 +147,9 @@ body {
 
 .money {
     position: absolute;
-    top: 24vw;
-    left: 7vw;
-    width: 85%;
+    top: 0vw;
+    left: 0;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -403,7 +403,7 @@ body {
 
 .boton-final-movil{
     position: absolute;
-    top: 125vw;
+    top: 255vw;
     left: 23%;
     width: 55vw;
     display: block;
@@ -467,4 +467,34 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 5;
+}
+
+.mockup {
+    position: absolute;
+    top: 0vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: auto;
+    z-index: 4;
+}
+
+.burbujas {
+    position: absolute;
+    top: 118vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: auto;
+    z-index: 4;
+}
+
+.testimonio {
+    position: absolute;
+    top: 88vw;
+    left: 63%;
+    transform: translateX(-50%);
+    width: 46vw;
+    height: auto;
+    z-index: 4;
 }
