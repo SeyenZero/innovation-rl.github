@@ -487,3 +487,64 @@ body {
     height: 144vw;
     top: 0;
 }
+
+
+
+.swiper-movil .swiper-slide-2 {
+    width: 60vw; /* Debe ser 100vw - (2 * padding lateral) */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.swiper-movil .swiper-slide-2 img {
+    width: auto;
+    height: 70%;
+    object-fit: cover; /* Crucial para que las imágenes se adapten al tamaño del slide */
+    /* object-position: center top;  Prueba esto si las imágenes se ven cortadas por arriba */
+}
+
+/* Estilos del contenedor interno del Swiper - wrapper */
+.swiper-movil .swiper-wrapper-2 {
+    /* Swiper gestiona esto. No necesitas añadirle flexbox ni nada aquí */
+}
+
+
+/* Estilos para el Swiper de PC (si lo descomentas en el HTML) */
+@media (min-width: 768px) {
+    .swiper-movil {
+    position: absolute;
+    top: 0; /* Ajusta este valor. Prueba con 70vw, 80vw, etc. hasta que el slider se vea debajo del texto */
+    left: 0;
+    width: 100vw;
+    height: 100%; /* Ajusta este valor para el tamaño de las imágenes. Si son altas, este valor debe ser mayor */
+    overflow: hidden;
+    z-index: 3; /* Asegúrate de que esté por encima de otros elementos */
+    padding: 0 10vw; /* Ajusta este valor para cuánto se ve de las imágenes laterales */
+    box-sizing: border-box; /* Importante para que el padding no afecte el ancho total */
+}
+
+.swiper-movil .swiper-slide-2 {
+    width: 18vw; /* Debe ser 100vw - (2 * padding lateral) */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.swiper-movil .swiper-slide-2 img {
+    width: auto;
+    height: 60%;
+    object-fit: cover; /* Crucial para que las imágenes se adapten al tamaño del slide */
+    /* object-position: center top;  Prueba esto si las imágenes se ven cortadas por arriba */
+}
+
+/* Estilos del contenedor interno del Swiper - wrapper */
+.swiper-movil .swiper-wrapper {
+    /* Swiper gestiona esto. No necesitas añadirle flexbox ni nada aquí */
+}
+
+}
