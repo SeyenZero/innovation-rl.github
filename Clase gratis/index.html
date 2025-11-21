@@ -9,10 +9,6 @@
 </head>
 <body>
     <section class="bloque bloque-1">
-        <div class="contenedor-movil">
-            <img class="fondo-movil cell" src="fondo telefono/FONDO-1.webp" alt="fondo 1">
-        </div>
-
         <div class="contenedor-pc">
             <img class="fondo-pc pc" src="fondo/1.webp" alt="fondo 1">
             <img class="texto-pc pc" src="texto/TEXTO_01.webp" alt="texto 1">
@@ -21,12 +17,6 @@
     </section>
 
     <section class="bloque bloque-2">
-        <div class="contenedor-movil">
-            <img class="fondo-movil cell" src="fondo telefono/FONDO-2.webp" alt="fondo 2">
-            <img class="texto-movil cell" src="text telefono/TEXTO-1.webp" alt="texto 2">
-            <img class="boton-movil cell" src="botones telefono/BOTON-1.png" alt="">
-            <img class="icono-1" src="fondo telefono/barra.png" alt="">
-        </div>
 
         <div class="contenedor-pc">
             <img class="fondo-pc pc" src="fondo/2.webp" alt="fondo 2">
@@ -38,7 +28,7 @@
     <section class="bloque bloque-3">
         <div class="contenedor-movil">
             <img class="fondo-movil cell" src="fondo telefono/FONDO-3.webp" alt="fondo 2">
-            <img class="texto-movil cell" src="text telefono/TEXTO-2.webp" alt="texto 2">
+            <img class="texto-movil cell" src="text telefono/TEXTO-3.webp" alt="texto 2">
             <img class="boton-movil-1 cell" src="botones telefono/BOTON-3.png" alt="">
         </div>
 
@@ -53,7 +43,7 @@
     <section class="bloque bloque-4">
         <div class="contenedor-movil">
             <img class="fondo-movil cell" src="fondo telefono/FONDO-4.webp" alt="fondo 2">
-            <img class="texto-movil cell" src="text telefono/TEXTO-3.webp" alt="texto 2">
+            <img class="texto-movil cell" src="text telefono/TEXTO-1_04.png" alt="texto 2">
         </div>
 
         <div class="contenedor-pc">
@@ -183,7 +173,7 @@
         <div class="contenedor-movil">
             <img class="fondo-movil cell" src="fondo telefono/FONDO-11.webp" alt="fondo 2">
             <img class="texto-movil cell" src="text telefono/TEXTO-11.webp" alt="texto 2">
-            <video class="video-movil" src="MOSTRANDO EL LAB.mp4"></video>
+            <video controls class="video-movil" src="CURSO.mp4"></video>
         </div>
         <div class="contenedor-pc">
             <img class="fondo-pc pc" src="fondo/11.webp" alt="fondo 2">
@@ -246,6 +236,7 @@
             <img class="fondo-movil cell" src="fondo telefono/FONDO-15.webp" alt="fondo 2">
             <img class="texto-movil cell" src="text telefono/TEXTO-14.webp" alt="texto 2">
             <img class="icono cell" src="mensajes telefono\textimonio.png" alt="">
+            <Video controls src="TESTIMONIO.mp4" class="testimonio"></Video>
         </div>
 
         <div class="contenedor-pc" id="hotmar-pc">
@@ -292,6 +283,7 @@
             <img class="fondo-movil cell" src="fondo telefono/FONDO-18.webp" alt="fondo 2">
             <img class="texto-movil cell arreglar" src="text telefono/TEXTO-17.webp" alt="texto 2">
             <a href="https://wa.link/m7vj4n"><img class="boton-final-movil" src="botones telefono\BOTON-4.png" alt=""></a>
+            <img src="/fondo telefono/ICONO_13.png" alt="" class="icono_13">
         </div>
     </section>  
 
@@ -334,36 +326,5 @@
         });
         */
     </script>
-    <script>
-        function cambiarURL() {
-            // La nueva ruta que quieres mostrar. 
-            // Debe ser un PATH relativo dentro de tu mismo dominio.
-            const nuevaRuta = '/Clase'; 
-
-            // 1. El objeto 'state': (opcional) Datos que quieres asociar con la nueva URL.
-            //    Útil si luego quieres recuperar estos datos con el evento popstate.
-            const stateObj = { 
-                rutaOriginal: window.location.pathname 
-            };
-            
-            // 2. El 'title': (opcional) El título que se mostrará si el historial se guarda. 
-            //    (Muchos navegadores ignoran esto hoy en día, puedes dejarlo como cadena vacía).
-            const nuevoTitulo = 'Innovation RL - Clase'; 
-
-            // 3. El 'url' (ruta): La parte de la URL que se reemplazará en la barra de direcciones.
-            //    (Por ejemplo, de '.../Clase%20gratis/index.html' a '.../Clase')
-            
-            
-            // Llama a la API de Historial para modificar la URL
-            history.pushState(stateObj, nuevoTitulo, nuevaRuta);
-            
-            
-            // Muestra un mensaje para confirmar que funcionó
-            document.getElementById('mensaje').textContent = 
-                '✅ ¡URL cambiada con éxito! Revisa la barra de direcciones. \n' +
-                'La nueva URL visible es: ' + window.location.href;
-        }
-    </script>
 </body>
-
 </html>
