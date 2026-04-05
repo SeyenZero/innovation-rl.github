@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Esto asegura que cada bloque sea un "ancla" para lo que hay dentro */
+.bloque {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Evita que las imágenes se salgan del cuadro */
+}
+
+/* El fondo debe ocupar el espacio base */
+.fondo-movil {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: -1; /* Asegura que el fondo esté detrás de todo */
+}
+
+.bloque-movil {
+    position: relative; /* Importante: relativo para que los hijos absolutos se guíen por este padre */
+    width: 100%;
+    display: block;    /* Cambia 'relative' por 'block' en el display si lo tenías mal */
+}
+
+
+.texto-movil {
+    position: absolute; /* Estos sí flotan sobre el fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.imagen-movil {
+    position: absolute; /* Estos sí flotan sobre el fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.ficha-1 {
+    top: 50%; /* Ajusta según necesites */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    width: 100%; /* Ajusta el tamaño según necesites */
+}
+
+.boton-movil-1 {
+    position: absolute;
+    top: 66vw; /* Ajusta según necesites */
+    left: 14vw;
+    width: 50%;
+    z-index: 2;
+}
+
+.boton-movil-2 {
+    position: absolute;
+    top:2%;
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    left: 50%; /* Ajusta según necesites */
+    width: 90%;
+    z-index: 2;
+}
+
+.boton-movil-3 {
+    position: absolute;
+    top:46%;
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    left: 50%; /* Ajusta según necesites */
+    width: 70%;
+    z-index: 2;
+}
+
+.boton-movil-4 {
+    position: absolute;
+    top:90.5%;
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    left: 50%; /* Ajusta según necesites */
+    width: 70%;
+    z-index: 2;
+}
+
+.boton-movil-5 {
+    position: absolute;
+    top: 34%;
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    left: 50%; /* Ajusta según necesites */
+    width: 65%;
+    z-index: 2;
+}
+
+.boton-movil-6 {
+    position: absolute;
+    top: 65.4%;
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    left: 50%; /* Ajusta según necesites */
+    width: 65%;
+    z-index: 2;
+}
+
+.boton-movil-7 {
+    position: absolute;
+    top: 96.2%;
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    left: 50%; /* Ajusta según necesites */
+    width: 65%;
+    z-index: 2;
+}
+
+.boton-movil-8 {
+    position: absolute;
+    top: 94%;
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    left: 50%; /* Ajusta según necesites */
+    width: 65%;
+    z-index: 2;
+}
+
+@media (min-width: 768px) {
+    .movil {
+        display: none;
+    }
+}
